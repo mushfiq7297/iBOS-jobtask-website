@@ -1,6 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../pages/Home";
+import Products from "../pages/Products";
+import Categories from "../pages/Categories";
+import Custom from "../pages/Custom";
+import Blog from "../pages/Blog";
 
 const router = createBrowserRouter([
     {
@@ -20,41 +24,23 @@ const router = createBrowserRouter([
     //     path: "/register",
     //     element: <Register></Register>
     //   },
-    //   {
-    //     path: "/roomDetails/:id",
-    //     element: <PrivateRouter><RoomDetails></RoomDetails></PrivateRouter>,
-    //     loader: ({params}) => fetch(`https://hotel-booking-server-smoky.vercel.app/rooms/${params.id}`)
-    //   },
-    //   {
-    //     path: "/about",
-    //     element: <About></About>,
-    //   },
-    //   {
-    //     path: "/contact",
-    //     element: <Contact></Contact>,
-    //   },
-    //   {
-    //     path: "/room",
-    //     element:<Availableroom></Availableroom>
-    //   },
-    //   {
-    //     path: "/myBookings",
-    //     element:<PrivateRouter><MyBookings></MyBookings></PrivateRouter>,
-    //     loader:() => fetch('https://hotel-booking-server-smoky.vercel.app/booking')
-
-    //   }
-    //   ,
-    //   {
-    //     path: "/reviews/:id",
-    //     element:<Reviews></Reviews>
-    //   },
-    //   {
-    //     path:"/testimonials",
-    //     element: <Testimonials></Testimonials>,
-    //     loader:()=> fetch('https://hotel-booking-server-smoky.vercel.app/reviews')
-    //   }
-
-
+      {
+        path: "/products",
+        element: <Products></Products>
+      },
+      {
+        path: "/categories",
+        element: <Categories></Categories>,
+      },
+      {
+        path: "/custom",
+        element: <Custom></Custom>,
+      },
+      {
+        path: "/Blog",
+        element:<Blog></Blog>
+      },
+      
     ]
     },
   ]);
